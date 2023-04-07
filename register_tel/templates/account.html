@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+    <h1>{{ account.user.first_name }} {{ account.user.last_name }}</h1>
+    <ul>
+        {% if account.photo_url %}
+            <li> <img src="{{ account.photo_url.url }}" alt="photo"></li>
+        {% endif %}
+        <li>Username: {{ account.user.username }}</li>
+        {% if account.nick_name %}
+            <li>Nickname: {{ account.nick_name }}</li>
+        {% endif %}
+        {% if account.user.first_name %}
+            <li>First name: {{ account.user.first_name }}</li>
+        {% endif %}
+
+        {% if account.user.last_name %}
+            <li>Last name: {{ account.user.last_name }}</li>
+        {% endif %}
+
+
+
+    </ul>
+</body>
+{% endblock %}
