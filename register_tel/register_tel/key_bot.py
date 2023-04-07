@@ -1,1 +1,1 @@
-KEY_TOKEN = '5661308312:AAEBTnms1zf6XkOslxlwea4IzxeI8agc590'
+KEY_TOKEN = '*******************************'
