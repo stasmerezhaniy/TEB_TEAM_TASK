@@ -1,33 +1,33 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'index' %}">
-      <h2 class="navbar">Telegram Registration </h2>
+<nav>
+  <div>
+    <a href="{% url 'index' %}">
+      <h2>Telegram Registration </h2>
     </a>
       <span>
   {% if request.user.is_authenticated %}
-          <ul class="navbar-nav">
-              <ul class="nav-item">
-                <a class="nav-link" role="button" aria-current="page" href="{% url 'account' account.id %}">Account</a>
+          <ul>
+              <ul>
+                <a role="button" aria-current="page" href="{% url 'account' account.id %}">Account</a>
               </ul>
           </ul>
   {% endif %}
       </span>
 
-  <span class="user-nav">
-      <ul class="nav justify-content-end">
+  <span>
+      <ul>
           {% if request.user.is_authenticated %}
 
         <ul>
             <ul>
-              <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              <a href="{% url 'logout' %}">Logout</a>
           </ul>
         </ul>
       {% else %}
-       <ul class="navbar-nav">
-          <ul class="nav-item">
-              <a class="nav-link" href="{% url 'login' %}">Login</a>
+       <ul>
+          <ul>
+              <a href="{% url 'login' %}">Login</a>
           </ul>
 
        </ul>
